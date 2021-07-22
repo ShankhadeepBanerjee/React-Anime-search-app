@@ -1,0 +1,484 @@
+:root {
+	--color-one: rgb(28, 117, 110, 93%);
+	--color-two: #fff;
+	--color-three: rgb(28, 117, 110, 93%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* this is nav part  */
+.nav {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	background-color: var(--color-one);
+}
+
+.logo {
+	color: var(--color-two);
+	margin: 20px 10px;
+}
+
+.nav-links > a {
+	margin: 20px;
+	text-decoration: none;
+	color: var(--color-two);
+	font-weight: 500;
+}
+.nav-links > a:hover {
+	text-decoration: underline;
+}
+
+/* This is content part  */
+.content {
+	display: flex;
+	min-height: 100vh;
+}
+
+/* This is Sidebar part  */
+.sidebar {
+	width: 23%;
+	background-color: var(--color-two);
+	padding-right: 5px;
+}
+
+.small-card {
+	display: flex;
+	margin: 2px 5px;
+	font-size: 80%;
+	width: 100%;
+	background-color: var(--color-two);
+	border-radius: 20px;
+	transition: all linear 100ms;
+}
+
+.small-card:hover {
+	background-color: var(--color-three);
+	color: var(--color-two);
+	cursor: pointer;
+}
+
+.small-card img {
+	width: 30%;
+	border-radius: inherit;
+}
+.small-card p {
+	margin: 5px;
+	text-align: left;
+	font-weight: 500;
+}
+.small-card a {
+	text-decoration: none;
+	font-weight: 700;
+	color: inherit;
+}
+.small-card a:hover {
+	text-decoration: underline;
+}
+.top-anime-list {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+/* This is Main part  */
+.main {
+	width: 75%;
+	margin: 0 auto;
+	background-color: var(--color-two);
+	padding-left: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Home page Section  */
+.carousel {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/* OtherPAge Section  */
+.search-form {
+	margin: 10px;
+	transition: width 0.6s ease;
+}
+.search-form:focus-within {
+	width: 100%;
+}
+
+@keyframes example {
+	0% {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+.example-div {
+	animation-name: example;
+	animation-duration: 2s;
+}
+
+.search-results {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.big-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: inherit;
+	width: 150px;
+	height: auto;
+	border: solid 2px rgba(223, 217, 217, 0.637);
+	margin: 5px;
+	border-radius: 10px;
+	background-color: var(--color-three);
+	color: var(--color-two);
+	transition: all linear 100ms;
+}
+.big-card:hover {
+	transform: scale(1.01);
+	box-shadow: 0px 2px 10px 0px var(--color-one);
+	opacity: 0.9;
+}
+
+.big-card-img {
+	width: 100%;
+	height: 60%;
+}
+.big-card-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+}
+.big-card-title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.big-card > p {
+	font-size: 80%;
+	margin: 2px;
+	font-weight: 500;
+}
+.big-card a {
+	display: inline-block;
+	height: 100%;
+	color: inherit;
+	text-decoration: none;
+	font-size: 75%;
+	border-radius: inherit;
+}
+.big-card a:hover {
+	text-decoration: underline;
+}
+
+/* This is Modal Sewction  */
+
+.modal {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal a {
+	text-decoration: none;
+}
+
+/* This is Large Card section  */
+.large-card {
+	width: 60%;
+	height: fit-content;
+	background-color: var(--color-two);
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	padding: 20px;
+	justify-content: center;
+	position: relative;
+}
+.large-card > div {
+	display: flex;
+}
+.large-card > div > div {
+	margin: 5px;
+}
+
+.large-card img {
+	height: 200px;
+}
+
+.large-card h1 {
+	width: inherit;
+	text-align: left;
+}
+
+.large-card p {
+	width: inherit;
+}
+.close-btn {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: fit-content;
+	padding: 10px;
+	border: none;
+}
+.close-btn:hover {
+	background-color: var(--color-one);
+	color: var(--color-two);
+	cursor: pointer;
+}
+
+/* this is large card animation section  */
+@keyframes img-div {
+	0% {
+		transform: translateY(-50px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+@keyframes title-div {
+	0% {
+		transform: translateX(50px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+@keyframes info-div {
+	0% {
+		transform: translateX(-50px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+.img-div {
+	animation-name: img-div;
+	animation-duration: 1s;
+}
+
+.title-div {
+	animation-name: title-div;
+	animation-duration: 1s;
+}
+
+.info-div {
+	display: flex;
+	flex-direction: column;
+	animation-name: info-div;
+	animation-duration: 1s;
+}
+
+/* Otherpages Section  */
+/* Genre section  */
+
+.genre:nth-child(1) {
+	text-align: left;
+}
+
+.genre:nth-child(2) {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 20px 5px;
+}
+
+.genre-btns {
+	padding: 5px;
+	margin: 5px 5px;
+	border-radius: 5px;
+	border: none;
+	font-size: 1rem;
+	transition: all linear 200ms;
+	cursor: pointer;
+}
+.genre-btns:hover {
+	background-color: var(--color-one);
+	color: var(--color-two);
+}
+.genre-btns:focus {
+	background-color: var(--color-one);
+	color: var(--color-two);
+}
+
+/* type-checkboxes section  */
+.type-checkboxes {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	font-size: 1rem;
+	font-weight: 500;
+}
+.type-checkboxes > * {
+	margin: 2px;
+}
+
+/* Sort by section  */
+.sort-by {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+.sort-by > * {
+	margin: 2px;
+}
+
+/* Footer Section  */
+.footer {
+	background-color: var(--color-one);
+	color: white;
+	margin: 0;
+	width: 100%;
+	height: 15vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.footer .my-name {
+	color: rgb(0, 3, 3);
+	font-weight: 500;
+}
+.footer a {
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	margin: 0 5px;
+	display: inline-block;
+}
+.footer a:hover {
+	color: blanchedalmond;
+	transform: scale(1.1);
+}
+
+/* Responsive design  */
+
+@media only screen and (max-width: 750px) {
+	.sidebar {
+		display: none;
+	}
+	.main {
+		width: 100%;
+	}
+	.rec-carousel button {
+		transform: scale(0.5);
+	}
+	.small-card {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.small-card img {
+		width: 100%;
+	}
+	.large-card {
+		width: 90%;
+		height: 85%;
+		overflow-y: scroll;
+	}
+	.large-card > div {
+		flex-wrap: wrap;
+	}
+}
+
+@media only screen and (max-width: 300px) {
+	.sidebar {
+		display: none;
+	}
+	.big-card {
+		width: 100px;
+	}
+	.large-card {
+		width: fit-content;
+		height: 85%;
+		overflow-y: scroll;
+		font-size: 0.8rem;
+	}
+	.large-card img {
+		display: none;
+	}
+}
+
+.carousel {
+	display: block;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.car-content {
+	display: inline-flex;
+	transition: transform linear 300ms;
+}
+
+.col {
+	display: block;
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+}
+
+.red {
+	background-color: red;
+}
+.blue {
+	background-color: blue;
+}
+
+.green {
+	background-color: green;
+}
+
+.car-btns {
+	position: absolute;
+}
+.car-btns button {
+	font-weight: 700;
+	cursor: pointer;
+	padding: 10px;
+	border-radius: 40px;
+	opacity: 0.5;
+	transition: all linear 300ms;
+}
+.car-btns button:hover {
+	opacity: 1;
+}
+
+.left {
+	left: 0;
+	top: 45%;
+	z-index: 1;
+}
+
+.right {
+	top: 45%;
+	right: 0;
+	z-index: 1;
+}
